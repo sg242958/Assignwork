@@ -1,0 +1,45 @@
+**************Question-1***************
+
+list = [2, 5, 7, 7, 4, 3, 7, 8]
+sum = 0
+for i in list:
+    sum = sum + i
+
+print(sum)
+
+***************Question-2***************
+
+dict1 = {'first': 60, 'second' : 78, 'third' : 56, '4' : 43, '5' : 56, '6': 483}
+Maximum = max(dict1, key=dict1.get)
+dict = {}
+a= Maximum
+b = dict1.get(Maximum)
+dict[a] = b
+print(dict)
+
+***************Question-3***************
+
+list = [0,0,0,1,1,1,0,0,0,1,1,0,1,1,1,1,0,0,1,1]
+s = set(list)
+dict = {}
+for i in s:
+    dict[i] = list.count(i)
+maximum = max(dict, key=dict.get)
+print(str(max(dict, key=dict.get)) + " is " + str(dict.get(maximum))+ " times ")
+
+*****************Question-4**************
+
+CREATE TABLE Candidates(
+ID int, Name varchar(255), Email varchar(255)
+);
+CREATE TABLE Test_scores(
+ID int, first_round tinyint CHECK (first_round<=10), second_round tinyint CHECK (second_round<=10), third_round tinyint CHECK (third_round<=10)
+);
+
+
+ALTER TABLE Candidates
+ADD PRIMARY KEY (ID);
+ALTER TABLE Test_scores
+ADD FOREIGN KEY (ID) REFERENCES Candidates(ID);
+
+*********************************************************************************************************
